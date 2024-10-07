@@ -1,0 +1,189 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+.container {
+  max-width: 90%;
+  margin: auto;
+}
+
+.flex {
+  display: flex;
+}
+.flex1 {
+  display: flex;
+  justify-content: space-between;
+}
+
+/*this is for the header part*/
+nav {
+  height: 10vh;
+  line-height: 10vh;
+  background: white;
+  text-align: center;
+}
+
+.logo img {
+  margin-top: 20px;
+}
+
+nav ul {
+  width: 100%;
+  display: flex;
+  list-style: none;
+}
+
+nav ul li {
+  margin-left: 20px;
+}
+
+nav li a {
+  text-decoration: none;
+  color: #000;
+  text-transform: capitalize;
+  transition: 0.5s;
+}
+
+nav li a:hover {
+  color: #37b234;
+}
+
+.media_button i {
+  font-size: 20px;
+  display: none;
+}
+
+.account i {
+  color: #37b234;
+  margin: 30px 20px 0 0;
+}
+
+@media only screen and (max-width: 768px) {
+  .main_list {
+    overflow: hidden;
+    height: 0;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 10%;
+    padding: 0 0 0 40px;
+    transition: 0.5s;
+  }
+
+  nav .show_list {
+    height: 250px;
+    background: white;
+  }
+
+  nav ul {
+    flex-direction: column;
+  }
+
+  nav ul li a {
+    line-height: 40px;
+    display: table;
+  }
+
+  .media_button i {
+    display: block;
+    margin-top: 20px;
+    background: #37b234;
+    padding: 10px;
+    color: white;
+    cursor: pointer;
+  }
+
+  .account {
+    display: none;
+  }
+}
+
+/*----------header--------*/
+/*this part is for home*/
+.left {
+  width: 35%;
+}
+.right {
+  width: 65%;
+  overflow-x: hidden;
+}
+
+button {
+  padding: 15px 50px;
+  margin: 20px 20px 0 0;
+  border-radius: 50px;
+  border: none;
+  background: #36b234;
+  color: white;
+}
+
+.btn1 {
+  border: 2px solid white;
+}
+.btn2 {
+  background: white;
+  color: black;
+}
+
+.home {
+  position: relative;
+  color: white;
+}
+
+.home .left {
+  padding: 150px 0 0 65px;
+  margin-top: 50px;
+}
+
+.home .right {
+  margin-top: 100px;
+}
+
+.home::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  background-image: url("../image/slide.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 120vh;
+  width: 100%;
+  z-index: -1;
+}
+
+.time_box h1 {
+  font-size: 50px;
+  margin-left: 10px;
+}
+
+.time_box span {
+  font-size: 14px;
+  margin-left: 15px;
+}
+
+.home h2 {
+  font-size: 50px;
+  margin: 20px 0 20px 0;
+}
+
+/* Add this CSS for the animation */
+/* Slower animation */
+#bikeAnimation {
+  position: relative; /* Required for positioning */
+  animation: moveBike 5s ease-in-out infinite; /* Slower animation with 5 seconds duration */
+}
+
+@keyframes moveBike {
+  0% {
+    transform: translateX(0); /* Starting position */
+  }
+  50% {
+    transform: translateX(250px); /* Moves the bike 250px to the right */
+  }
+  100% {
+    transform: translateX(0); /* Returns to the starting position */
+  }
+}
